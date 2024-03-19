@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+    <title>見本市</title>
+</head>
+<body id="Home">
+    <header id="header">
+        <div class="logoBgImage">
+            <div class="logo"><img src="./img/logo.png" alt="" class="logoImg"></div>
+        </div>
+        <nav>
+            <ul id="mainMenu">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Qiita">Qiita</a></li>
+                <li class="listhover"><a href="#Document">Document</a>
+                    <!-- 参考資料用リスト -->
+                    <ul>
+                        <li class="documentList"><a href="#Link">Link</a></li>
+                        <li class="documentList"><a href="#Move">Move</a></li>
+                    </ul>
+                    <!-- 参考資料用リスト -->
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- ハンバーガーメニュー -->
+        <a href="#" class="hamburgerMenuButton">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <nav id="spMenu">
+            <ul id="spMenulist">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Qiita">Qiita</a></li>
+                <li class="listhover"><a href="#Document">Document</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- ハンバーガーメニュー -->
+    </header>
+
+    <main>
+            <!-- はじめに -->
+            <div class="contents">
+                <div class="animationTrigger">
+                    <h2>はじめに</h2>
+                    <div class="text">
+                        <p>WEBサイトを作成する際に参考にしているサイトや動画、
+                        さらにQiitaに投稿している備忘録についてまとめました。</p>
+                    </div>
+                </div>
+            </div>
+            <!-- はじめに終わり -->
+            
+            <!-- Qiita記事 -->
+            <div class="contents">
+                <p class="arrow">↓</p>
+                <p class="homeButtom"><a href="#Home">Topに戻る</a></p>
+                <p class="arrow">↓</p>
+                <div class="animationTrigger">
+                    <h2 id="Qiita">Qiita</h2>
+                    <div class="text textLeft">
+                        <p><a href="https://qiita.com/ume_work0831/items/985bbd8d0088cbebe0a3" target="_blank">◆HTML/CSS　備忘録① 親子関係</a></p>
+                        <p><a href="https://qiita.com/ume_work0831/items/fb79a980bde0f506bc13" target="_blank">◆HTML/CSS　備忘録② ブロック要素とインライン要素</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Qiita記事終わり -->
+
+            <!-- 参考まとめ -->
+            <div class="contents">
+                <p class="arrow">↓</p>
+                <p class="homeButtom"><a href="#Home">Topに戻る</a></p>
+                <p class="arrow">↓</p>
+                <div class="animationTrigger">
+                    <h2 id="Document">Document</h2>
+                        <h3 id="Link">Link</h3>
+                        <div class="text textLeft">
+                            <p><a href="https://coco-factory.jp/ugokuweb/" target="_blank">動くWebデザインアイディア帳 様</a></p>
+                            <p><a href="https://www.webcreatorbox.com/" target="_blank">Webクリエイターボックス 様</a></p>
+                            <p><a href="https://b-risk.jp/" target="_blank">東京ホームページ制作BRISK 様</a></p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="contents">
+                <div class="animationTrigger">
+                    <h3 id="Move">Move</h3>
+
+                        <div class="moveProperty">
+                            <iframe  width="50%" height="360" src="https://www.youtube.com/embed/hfcvwbaTpws?si=b_XAsq1vH0f3Sxrj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe width="50%" height="360" src="https://www.youtube.com/embed/zJZ3B4QKzZI?si=mPahd-kSTVAcSnig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+
+                        <p class="arrow">↓</p>
+                    <p class="homeButtom"><a href="#Home">Topに戻る</a></p>
+                </div>
+            </div>
+            <!-- 参考まとめ終わり -->
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-2-1/js/5-2-1.js"></script>
+    <script src="./js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+@charset "utf-8";
+
+html{
+    font-size: 104px;
+}
+
+/* body{
+    height: 100%;
+    overflow: hidden;
+} */
+
+/*ヘッダー*/
+header{
+    width: 100%;
+}
+
+.logo{
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.5);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.logoImg{
+    width: 5rem;
+}
+
+.logoBgImage{
+    display: table;
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/topimg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*ナビメニュー*/
+
+nav{
+    font-size: 0.3rem;
+    padding: 0.1rem;
+}
+
+#mainMenu{
+    display: flex;
+    justify-content: space-around;
+}
+
+#mainMenu li{
+    position: relative;
+}
+
+/*2階層目の設定*/
+
+nav li.listhover ul{
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    z-index: 4;
+    border-radius: 5px;
+    width: 180px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+}
+
+
+.documentList{
+    font-size: 0.2rem;
+    background: rgba(148, 225, 255,0.5);
+
+}
+
+
+.documentList:hover{
+    background-color: rgb(74, 89, 221);
+}
+
+/*カーソルを乗ると表示する設定*/
+
+nav li.listhover:hover > ul,
+nav li.listhover ul li:hover > ul,
+nav li.listhover:active > ul,
+nav li.listhover ul li:active >ul{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/*ナビメニューのリンク*/
+
+#mainMenu li a{
+    display: block;
+    color: rgb(7, 7, 119);
+    font-weight: bold;
+    padding:20px 35px;
+    transition:all .3s;
+}
+
+#mainMenu li a:hover{
+    color: rgb(88, 216, 255);
+    
+}
+
+#mainMenu li a::before{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom: 10px;
+    width: 100%;
+    height: 3px;
+    background: rgb(7, 7, 119);
+    transform: scale(0,1);
+    transition: 0.4s;
+}
+
+#mainMenu li a:hover::before{
+    transform: scale(0.7);
+}
+
+.documentList li a{
+    text-align: center;
+}
+
+.documentList li a:hover{
+    color: rgb(88, 216, 255);
+}
+
+/*ハンバーガーメニュー*/
+.hamburgerMenuButton{
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(7, 7, 119);
+    position: relative;
+    border-radius: 5px;
+    position: fixed;
+    top: 245px;
+    right: 5px;
+    z-index: 9999;
+}
+
+.hamburgerMenuButton span{
+    position: absolute;
+    left: 14px;
+    display: inline-block;
+    width: 45%;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    border-radius: 2px;
+    transition: all .4s;
+}
+
+.hamburgerMenuButton span:nth-of-type(1){
+    top: 15px;
+}
+
+.hamburgerMenuButton span:nth-of-type(2){
+    top: 23px;
+}
+
+.hamburgerMenuButton span:nth-of-type(3){
+    top: 31px;
+}
+
+/*ハンバーガーメニュー：クリック後の動作（×になる）*/
+
+.hamburgerMenuButton.active span:nth-of-type(1){
+    width: 45%;
+    top: 18px;
+    left: 15px;
+    transform: translateY(6px) rotate(-45deg);
+}
+
+.hamburgerMenuButton.active span:nth-of-type(2){
+    opacity: 0;
+}
+
+.hamburgerMenuButton.active span:nth-of-type(3){
+    width: 45%;
+    top: 30px;
+    left: 15px;
+    transform: translateY(-6px) rotate(45deg);
+}
+
+/*SPメニュー*/
+#spMenu{
+    width: 100%;
+    height: 100vh;
+    background: rgb(132, 142, 161);
+    position: fixed;
+    top: 0;
+    right: -120%;
+    z-index: 999;
+    transition: all 0.6s;
+}
+
+/*SPメニュー：クリックでメニューオープン*/
+#spMenu.openactive{
+    right: 0;
+}
+
+/*SPメニューレイアウト*/
+#spMenulist{
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#spMenulist li{
+    text-align: center;
+}
+
+#spMenulist li a{
+    display: block;
+    color: #333;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+/*見出し設定*/
+h2{
+    font-size: 0.5rem;
+    color: rgb(0, 0, 0);
+    padding-top: 3rem;
+    width: 80%;
+    background: linear-gradient(transparent 95%, rgb(7, 7, 119) 0%);
+    margin: 0 auto;
+    text-shadow: 2px 3px 3px rgb(255, 255, 255);
+}
+
+h3{
+    font-size: 0.3rem;
+    margin-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+/*戻るボタン*/
+.homeButtom{
+    font-size: 0.2rem;
+    font-weight: bold;
+}
+
+.homeButtom a{
+    color: rgb(7, 7, 119);
+}
+
+/*メイン全体の設定*/
+
+.contents{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+.arrow{
+    font-size: 0.3rem;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+}
+
+.text{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 0.2rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(245, 252, 255);
+    opacity: 0.7;
+    padding: 0.2rem 0.3rem ;
+    border-radius: 5px;
+}
+
+.text p a{
+    position: relative;
+}
+
+.text p a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left:2px;
+    width: 100%;
+    height: 3px;
+    background: rgb(7, 7, 119);
+    transform: scale(0,1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+
+.text p a:hover::after{
+    transform: scale(1,1);
+}
+
+.textLeft{
+    text-align: left;
+}
+
+/*コンテンツを下からふわっと表示させる*/
+
+.animationTrigger{
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+
+}
+
+.fadeIn{
+    opacity: 1;
+    transform: none;
+}
+
+/*はじめに*/
+
+
+/*Qiita記事まとめ*/
+
+.text p{
+    line-height: 0.4rem;
+}
+
+/*参考まとめ*/
+.moveProperty{
+    width: 100%;
+    display:flex ;
+}
+
+
+@media screen and (max-width: 976px)  {
+    /*976px以下はここから読み込み*/
+    html{
+        font-size: 56px;
+    }
+
+    .logo{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .logoBgImage{
+        display: table;
+        width: 100%;
+        height: 240px;
+        background-image: url(../img/topimg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #mainMenu{
+        visibility: hidden;
+    }
+
+    /*ハンバーガーメニュー表示*/
+    .hamburgerMenuButton{
+        display: block;
+    }
+
+    /*2階層目の設定*/
+
+    nav li.listhover ul{
+        position: absolute;
+        left: 0;
+        top: 110px;
+        z-index: 4;
+        border-radius: 5px;
+        width: 180px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    /*カーソルを乗ると表示する設定*/
+
+    nav li.listhover:hover > ul,
+    nav li.listhover ul li:hover > ul,
+    nav li.listhover:active > ul,
+    nav li.listhover ul li:active >ul{
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    /*MOVIE*/
+    .moveProperty{
+        display: block;
+    }
+
+    iframe {
+        width: 100%
+    }
+}
