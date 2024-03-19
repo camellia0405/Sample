@@ -9,6 +9,10 @@ html{
     overflow: hidden;
 } */
 
+main{
+    width: auto;
+}
+
 /*ヘッダー*/
 header{
     width: 100%;
