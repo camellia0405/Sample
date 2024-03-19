@@ -367,31 +367,6 @@ h3{
         display: block;
     }
 
-    /*2階層目の設定*/
-
-    nav li.listhover ul{
-        position: absolute;
-        left: 0;
-        top: 110px;
-        z-index: 4;
-        border-radius: 5px;
-        width: 180px;
-        visibility: hidden;
-        opacity: 0;
-        transition: all .3s;
-    }
-
-    /*カーソルを乗ると表示する設定*/
-
-    nav li.listhover:hover > ul,
-    nav li.listhover ul li:hover > ul,
-    nav li.listhover:active > ul,
-    nav li.listhover ul li:active >ul{
-        visibility: visible;
-        opacity: 1;
-    }
-
-
     /*MOVIE*/
     .moveProperty{
         display: block;
