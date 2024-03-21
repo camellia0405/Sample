@@ -9,10 +9,6 @@ main{
 }
 
 /*ヘッダー*/
-header{
-    width: 100%;
-}
-
 .topMenu{
     width: 100%;
     display: flex;
