@@ -10,9 +10,8 @@ main{
 
 /*ヘッダー*/
 .topMenu{
-    width: 100%;
+    width: auto;
     display: flex;
-    justify-content:space-between;
     align-items:flex-end;
 }
 
@@ -24,19 +23,19 @@ main{
 }
 
 .logoImg{
-    width: 3rem;
+    width: 100%;
 }
 
 /*ナビメニュー*/
 
 nav{
+    width: 40%;
     font-size: 0.3rem;
     padding: 0.1rem;
 }
 
 #mainMenu{
     display: flex;
-    justify-content: space-around;
 }
 
 #mainMenu li{
