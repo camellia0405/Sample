@@ -11,24 +11,25 @@
 </head>
 <body id="Home">
     <header id="header">
-        <div class="logoBgImage">
+        <div class="topMenu">
             <div class="logo"><img src="./img/logo.png" alt="" class="logoImg"></div>
-        </div>
-        <nav>
-            <ul id="mainMenu">
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#Qiita">Qiita</a></li>
-                <li class="listhover"><a href="#Document">Document</a>
-                    <!-- 参考資料用リスト -->
-                    <ul>
-                        <li class="documentList"><a href="#Link">Link</a></li>
-                        <li class="documentList"><a href="#Move">Move</a></li>
-                    </ul>
-                    <!-- 参考資料用リスト -->
-                </li>
-            </ul>
-        </nav>
         
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Qiita">Qiita</a></li>
+                    <li class="listhover"><a href="#Document">Document</a>
+                        <!-- 参考資料用リスト -->
+                        <ul>
+                            <li class="documentList"><a href="#Link">Link</a></li>
+                            <li class="documentList"><a href="#Move">Move</a></li>
+                        </ul>
+                        <!-- 参考資料用リスト -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <!-- ハンバーガーメニュー -->
         <a href="#" class="hamburgerMenuButton">
             <span></span>
@@ -38,6 +39,7 @@
         <nav id="spMenu">
             <ul id="spMenulist">
                 <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
                 <li><a href="#Qiita">Qiita</a></li>
                 <li class="listhover"><a href="#Document">Document</a>
                 </li>
@@ -47,10 +49,14 @@
     </header>
 
     <main>
+        <div class="mainImageBox">
+            <img src="./img/bgimage.png" alt="メイン画像" class="mainImage">
+            <p class="topTextFirst">Every journey begins with a single step. Rome wasn't built in a day.</p>
+        </div>
             <!-- はじめに -->
             <div class="contents">
                 <div class="animationTrigger">
-                    <h2>はじめに</h2>
+                    <h2 id="About">はじめに</h2>
                     <div class="text">
                         <p>WEBサイトを作成する際に参考にしているサイトや動画、
                         さらにQiitaに投稿している備忘録についてまとめました。</p>
@@ -61,9 +67,9 @@
             
             <!-- Qiita記事 -->
             <div class="contents">
-                <p class="arrow">↓</p>
+                <p class="arrow">▼</p>
                 <p class="homeButtom"><a href="#Home">Topに戻る</a></p>
-                <p class="arrow">↓</p>
+                <p class="arrow">▼</p>
                 <div class="animationTrigger">
                     <h2 id="Qiita">Qiita</h2>
                     <div class="text textLeft">
@@ -76,9 +82,9 @@
 
             <!-- 参考まとめ -->
             <div class="contents">
-                <p class="arrow">↓</p>
+                <p class="arrow">▼</p>
                 <p class="homeButtom"><a href="#Home">Topに戻る</a></p>
-                <p class="arrow">↓</p>
+                <p class="arrow">▼</p>
                 <div class="animationTrigger">
                     <h2 id="Document">Document</h2>
                         <h3 id="Link">Link</h3>
@@ -100,7 +106,7 @@
                             <iframe width="50%" height="360" src="https://www.youtube.com/embed/zJZ3B4QKzZI?si=mPahd-kSTVAcSnig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
 
-                        <p class="arrow">↓</p>
+                        <p class="arrow">▼</p>
                     <p class="homeButtom"><a href="#Home">Topに戻る</a></p>
                 </div>
             </div>

@@ -11,28 +11,27 @@ main{
 /*ヘッダー*/
 header{
     width: 100%;
+    display: flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+}
+
+.topMenu{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items:flex-end;
 }
 
 .logo{
     width: 100%;
     background-color: rgb(255, 255, 255, 0.5);
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    text-align: center;
+    padding: 0.2rem;
+    margin-left: 0.2rem;
 }
 
 .logoImg{
-    width: 5rem;
-}
-
-.logoBgImage{
-    display: table;
-    width: 100%;
-    height: 400px;
-    background-image: url(../img/topimg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 3rem;
 }
 
 /*ナビメニュー*/
@@ -137,8 +136,8 @@ nav li.listhover ul li:active >ul{
     position: relative;
     border-radius: 5px;
     position: fixed;
-    top: 245px;
-    right: 5px;
+    top: 16px;
+    right: 8px;
     z-index: 9999;
 }
 
@@ -258,9 +257,6 @@ h3{
     margin: 0 auto;
     text-align: center;
 }
-
-
-
 .arrow{
     font-size: 0.3rem;
     text-align: center;
@@ -305,6 +301,24 @@ h3{
     text-align: left;
 }
 
+.mainImageBox{
+    width: 100%;
+    position: relative;
+}
+
+.mainImage{
+    width: 100%;
+    opacity: 0.8;
+}
+
+.topTextFirst{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    color: rgb(41, 45, 68, 0.6);
+    font-size: 0.8rem;
+}
+
 /*コンテンツを下からふわっと表示させる*/
 
 .animationTrigger{
@@ -342,23 +356,17 @@ h3{
         font-size: 56px;
     }
 
-    .logo{
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+    .topMenu{
+        flex-direction: column;
     }
 
-    .logoBgImage{
-        display: table;
+    .logo{
         width: 100%;
-        height: 240px;
-        background-image: url(../img/topimg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+        text-align: center;
     }
 
     #mainMenu{
-        visibility: hidden;
+        display: none;
     }
 
     /*ハンバーガーメニュー表示*/
