@@ -23,7 +23,7 @@ main{
 }
 
 .logoImg{
-    width: 100%;
+    width: 4rem;
 }
 
 /*ナビメニュー*/
@@ -340,7 +340,13 @@ h3{
     width: 100%;
     display:flex ;
 }
-
+@media screen and (max-width: 1024px)  {
+    /*1024px以下はここから読み込み*/
+    .logoImg{
+        width: 100%;
+    }
+    
+}
 
 @media screen and (max-width: 976px)  {
     /*976px以下はここから読み込み*/
@@ -373,5 +379,12 @@ h3{
 
     iframe {
         width: 100%
+    }
+}
+
+@media screen and (max-width: 280px)  {
+    /*240px以下はここから読み込み*/
+    .topTextFirst{
+        font-size: 0.5rem;
     }
 }
